@@ -1,0 +1,15 @@
+.idea/
+user_notification/notification_center/__pycache__/__init__.cpython-311.pyc
+user_notification/notification_center/__pycache__/admin.cpython-311.pyc
+user_notification/notification_center/__pycache__/apps.cpython-311.pyc
+user_notification/notification_center/__pycache__/models.cpython-311.pyc
+user_notification/notification_center/__pycache__/notification_service.cpython-311.pyc
+user_notification/notification_center/__pycache__/views.cpython-311.pyc
+user_notification/notification_center/migrations/__pycache__/__init__.cpython-311.pyc
+user_notification/user_notification/__pycache__/__init__.cpython-311.pyc
+user_notification/user_notification/__pycache__/__init__.cpython-39.pyc
+user_notification/user_notification/__pycache__/settings.cpython-311.pyc
+user_notification/user_notification/__pycache__/settings.cpython-39.pyc
+user_notification/user_notification/__pycache__/urls.cpython-311.pyc
+user_notification/user_notification/__pycache__/wsgi.cpython-311.pyc
+user_notification/user_notification/util/__pycache__/exception.cpython-311.pyc
