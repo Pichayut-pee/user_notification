@@ -89,7 +89,7 @@ class NotificationService:
                     logging.error(response.text)
                     raise Exception('Failed to send message to LINE')
 
-                notification_log = NotificationLog(user_id=line_user_id, message=messages, from_system=from_system)
+                notification_log = NotificationLog(user_id=line_user_id, message=json.dumps(messages), from_system=from_system)
                 notification_log.save()
 
             except Exception as e:
