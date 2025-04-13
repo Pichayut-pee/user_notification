@@ -15,3 +15,8 @@ user_notification/user_notification/__pycache__/wsgi.cpython-311.pyc
 user_notification/user_notification/util/__pycache__/exception.cpython-311.pyc
 user_notification/notification_center/migrations/__pycache__/0001_initial.cpython-311.pyc
 user_notification/notification_center/migrations/__pycache__/0002_alter_notificationlog_user_id.cpython-311.pyc
+user_notification/user_notification/util/__pycache__/alert.cpython-311.pyc
+user_notification/user_notification/util/__pycache__/utlUtil.cpython-311.pyc
+user_notification/user_notification/.env
+user_notification/notification_center/migrations/__pycache__/0003_notificationlog_from_system_and_more.cpython-311.pyc
+user_notification/notification_center/migrations/__pycache__/0004_alter_notificationlog_from_system.cpython-311.pyc

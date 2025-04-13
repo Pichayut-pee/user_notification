@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 import requests
 from notification_center.models import NotificationLog
-from user_notification.util.alert import send_alert
+from user_notification.util.alert import send_alert, send_user_monitoring
 from user_notification.util.utlUtil import shorten_url
 from user_notification.util.exception import ServerErrorException
 import uuid
@@ -18,7 +18,7 @@ class NotificationService:
         self.line_message_api = os.getenv("LINE_MESSAGE_API")
         self.line_token = os.getenv("LINE_MESSAGE_TOKEN")
 
-    def notify_line_template(self, line_user_id, messages):
+    def notify_line_template(self, line_user_id, messages,from_system):
         headers = {'Content-Type': 'application/json',
                    'Authorization': 'Bearer ' + self.line_token
                    }
@@ -89,8 +89,9 @@ class NotificationService:
                     logging.error(response.text)
                     raise Exception('Failed to send message to LINE')
 
-                notification_log = NotificationLog(user_id=line_user_id, message=messages)
+                notification_log = NotificationLog(user_id=line_user_id, message=messages, from_system=from_system)
                 notification_log.save()
+
             except Exception as e:
                 send_alert("Failed to send message to LINE: " + str(e))
                 logging.error(e + ' ' + str(request_messages))

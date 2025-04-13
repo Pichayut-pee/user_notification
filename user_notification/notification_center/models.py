@@ -9,8 +9,9 @@ from django.db import models
 class NotificationLog(models.Model):
     id = models.AutoField(primary_key=True)
     user_id = models.TextField()
-    message = models.TextField()
+    message = models.JSONField()
     created_at = models.DateTimeField(default=django.utils.timezone.now)
+    from_system = models.TextField(default="schedule_condo_notification")
 
     def serialize(self):
         return {
